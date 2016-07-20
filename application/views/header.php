@@ -1,7 +1,6 @@
 <html lang="en">
     <head>
-		
-        <title>Lexusinfra</title>
+		<title>Lexusinfra</title>
         <meta name="keywords" content="knaworld,lexusinfra,construction,civil companies,construction companies,engineering consultancy,consultancy,knaworld construction,civil construction,Top 10 construction company in Bhopal,Construction Company in Bhopal,Construction company in bhopal,top 10 construction company in bhopal,civil company,Bhopal,kna,knaworld,world,civil" />
 		<meta name="description" content="Lexusinfra is an ISO 9001-2008 Certified Company based in Bhopal (M.P) providing Multi-disciplinary Engineering Consultancy Services across the country. Established in the year 2004 by an ambisious young Qualified Enginer, the company is now one of the fastest growing Consultany firms working in the field of engineering, environment and project management consultancy around the country. The Company comprises of extremly motivated and skilled Engineers, planners, support staff and technicians with vast experience in feasibility studies, design, developement and implimentation of project there by contributing to the sucess of our client throught Excellent Technical and Managerial know-how." />
 
@@ -24,19 +23,87 @@
         <![endif]-->
          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-       
-       <script language=Javascript>
-      <!--
-      function number(xy)
+         <script language=Javascript>
+         function onlynumber(evt)
+         {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+             return false;
+             return true;
+         }
+      </script>
+      <!--------------------------------------------start java script validation---------------------------------------------------->
+   
+      <script>
+      function mobileValidation()
+    	{
+    	  var mobile = document.getElementById('mobile').value;//alert(mobile.length);return false;
+    	  if(mobile.length<10)
+    	  {
+    		  document.getElementById('mobile_error').innerHTML="<h5>Please Enter Valide Mobile Number</h5>";
+              return false;
+    	  }
+    	  else
+    	  {
+    		  $('#mobile_error').hide();
+    	  }
+    	}
+      function val()
       {
-         var ab = (xy.which) ? xy.which : xy.keyCode
-         if (ab > 3 && (ab < 4 || ab > 57))
-            return false;
-
-         return true;
+    	  //var mobile = document.getElementById('mobile').value;
+      var name = document.getElementById('name').value;
+      if(name== "")
+      {
+          document.getElementById('name_error').innerHTML= "<h5>Please Enter Your Name</h5>";
+          return false;
       }
-      //-->
-   </script>
+      
+     
+      if(mobile== "")
+      {
+          $('#name_error').hide();
+         document.getElementById('mobile_error').innerHTML="<h5>Please Enter Valide Mobile Number</h5>";
+          return false;
+      }
+      
+      var email = document.getElementById('email').value;
+      if(email== "")
+      {
+    	  $('#mobile_error').hide();
+       document.getElementById('email_error').innerHTML="<h5>Please Enter Email ID<h5>";
+       return false;
+      }
+      
+      var category = document.getElementById('category').value;
+            
+      if(category== "")
+      {	
+         $('#email_error').hide();
+       document.getElementById('category_error').innerHTML="<h5>Please Select Category</h5>";
+       
+       return false;
+      }
+     /* var category_other = document.getElementById('category_other').value;
+            
+       if(category_other== "")
+       {	
+          $('#email_error').hide();
+        document.getElementById('category_error').innerHTML="<h5>Please Select Category</h5>";
+
+        return false;
+       }*/
+      var resume = document.getElementById('resume').value;
+         if(resume== "")
+      {
+         $('#category_error').hide();
+         document.getElementById('resume_error').innerHTML="<h5>Please Upload Your Current CV<h5>";
+
+         return false;
+      } 
+        return true;
+      }
+     </script>
+     <!------------------------------------------------End of java script validation----------------------------------------------------------------->
     </head>
     <body>
          <div class="templatemo-top-bar" id="templatemo-top">
@@ -62,7 +129,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 </button>
-                                <a href="<?=base_url();?>index.html" class="navbar-brand"><img src="<?=base_url();?>images/lexuslogogreen.png" alt="knaworld_logo" title="KNA WORLD" /></a>
+                                <a href="<?=base_url();?>index.php" class="navbar-brand"><img src="<?=base_url();?>images/lexuslogogreen.png" alt="knaworld_logo" title="KNA WORLD" /></a>
                         </div>
                         <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;">

@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-        <div>
+   <div>
             
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -392,90 +391,97 @@
         </div>
 <!--star upload cv section -->        
  <div id="templatemo-upload">
-<div class="container">
-                <div class="row">
+      <div class="container">
+               <div class="row">
                     <div class="templatemo-line-header" style="margin-top:0px;">
                         <div class="text-center">
                             <hr class="team_hr team_hr_left hr_gray"/><span class="span_blog txt_darkgrey">Upload CV</span>
-                            <hr class="team_hr team_hr_right hr_gray"/>
+                             <hr class="team_hr team_hr_right hr_gray"/>
                         </div>
-                    </div>
-                    <div align="center">
-<?php  if($this->session->flashdata('message')) { ?>
-			<div class="row">
-				<div class="alert alert-success" align="center">
-				<strong><?=$this->session->flashdata('message')?></strong> 
-				</div>
-			</div>
-		<?php }?>
+                   </div>
+                   <div align="center">
+						<?php  if($this->session->flashdata('message_success')) { ?>
+								<div class="row">
+										<div class="alert alert-success" align="center">
+										    <strong><?=$this->session->flashdata('message_success')?></strong> 
+										</div>
+								  </div>
+								<?php }?>
+								<?php  if($this->session->flashdata('message_error')) { ?>
+									<div class="row">
+										 <div class="alert alert-danger" align="center">
+										     <strong style="font-size: 19px;"><?=$this->session->flashdata('message_error')?></strong> 
+										</div>
+									</div>
+								<?php }?>
+              </div>
+        </div>
+    <form name="reg"  onsubmit="return val();" action="<?php echo base_url();?>Home/set_Registration" method="POST" enctype="multipart/form-data"> 
+     	 <div class="Absolute-Center is-Responsive">
+     	 	 <div class="row">
+     	 	   	    <div class="col-sm-12">
+     	 	   	    	<div align="center"><h4 style="margin-top: 0px;"  class="h4_head">Add Your Curriculum Vitae</h3></div></br>
+     	 	   	    	<div class="form-group">
+					    	<label class="col-sm-2 control-label"  for="field-1">Name:-</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" name="name" id="name" maxlength="30" id="field-1" placeholder="Please Enter Name" value="" required>
+						    		<div style="color:red" id="name_error"></div>
+			 		    		</div>
+						</div></br></br>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-1">Contact Number:-</label>
+							<div class="col-sm-10">
+								<input type="text"  SIZE=12  maxlength="12" onkeypress="return onlynumber(event);" onblur="mobileValidation(this.value);" id="mobile" class="form-control" name="mobile" value="" id="field-1" placeholder="Please Enter Mobile Number" required>
+			                	<div style="color:red" id="mobile_error"></div>
+							</div>
+				    	</div></br></br>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-1">Email ID:-</label>
+							<div class="col-sm-10">
+								<input type="email" class="form-control"  maxlength="30" id="email" pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" name="email" value="" id="field-1" placeholder="Please Enter Email" required>
+							  	<div style="color:red" id="email_error"></div>
+							 </div>
+						</div></br></br>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-1">Category:-</label>
+							<div class="col-sm-6">
+								<div style="color:red" id="category_error"></div>
+								<select name="category" id="category" class="form-control" onchange="otherfield(this.value);" required>
+						         	<option value="Infrastruture/Highway"> Infrastructure/Highway</option>
+						         	
+			                         <option value="Road">Road</option> 
+							      		 <option value="Water(Waste water/Supply water)">Water(Waste water/Supply water)</option> 
+							 	  		 <option value="Construction/Building">Construction/Building</option> 
+							 	  		 <option value="Bridge">Bridge</option> 
+							 	  		 <option value="Other">Other</option> 
+						  	    </select><br/>
+							 		<div id="divID" style="display:none;">
+										 <input type="text" name="category_other" maxlength="30" class="form-control" id="Other" placeholder="Please Enter Your Category"><br/>
+							 	   </div>
+							  </div>
+						 </div></div>
+						 <div class="form-group">
+								<label class="col-sm-2 control-label" for="field-1">Upload CV:-</label>
+									 <div class="col-sm-10">
+										  <input type="file"  name="resume" id="resume" value="" id="field-1" required>
+										      <div style="color:red" id="resume_error">
+								     </div>
+							   </div>
+					     </div>
+					     <div class="form-group-separator"></div>
+							    <div class="form-group" align="center">
+								     <button type="submit" name="submit" class="btn btn-success">Submit</button>
+						       </div>
+     	 	             </div>
+     	            </div>
+     	       </div>
+          </form> 
      </div>
-    </div>
-      <form action="<?php echo base_url();?>Home/set_Registration" method="POST" enctype="multipart/form-data">
-       <div class="Absolute-Center is-Responsive">
-       <div class="col-sm-12"/>
-			<div align="center"><h4 style="margin-top: 0px;"  class="h4_head">Add Your Curriculum Vitae</h3></div></br>
-		    <div class="form-group">
-		    
-				<label class="col-sm-2 control-label" for="field-1">Name</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control" name="name" value="" id="field-1" placeholder="Please Enter Name" required>
-				</div>
-			</div>
-			</br></br>
-			<div class="form-group">
-				<label class="col-sm-2 control-label" for="field-1">Mobile</label>
-				<div class="col-sm-10">
-					<input type="text"  SIZE=12 MAXLENGTH=12 onkeypress="return number(event)" class="form-control" name="mobile" value="" id="field-1" placeholder="Please Enter Mobile Number" required>
-				</div>
-			</div>
-			</br></br>
-			<div class="form-group">
-				<label class="col-sm-2 control-label" for="field-1">Email</label>
-				<div class="col-sm-10">
-					<input type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="email" value="" id="field-1" placeholder="Please Enter Email" required>
-				</div>
-			</div>
-			
-			</br></br>
-			<div class="form-group">
-				<label class="col-sm-2 control-label" for="field-1" >Category</label>
-				<div class="col-sm-6">
-				<select name="category" class="form-control"  onchange="a(this.value);">
-                          <option value="Infrastruture/Highway">Infrastruture/Highway</option>
-	                      <option value="Road">Road</option> 
-					      <option value="Water(Waste water/Supply water)">Water(Waste water/Supply water)</option> 
-					 	  <option value="Constrution/Building">Constrution/Building</option> 
-					 	  <option value="Brigge">Brigge</option> 
-					 	  <option value="Other">Other</option> 
-					 </select>
-					 <br/>
-					 <div id="divID" style="display:none;">
-					 <input type="text" class="form-control" name="category" id="other">
-					 <br/>
-					 </div>
-					 </div>
-			</div>
-			</div>
-			
-	            <div class="form-group">
-				<label class="col-sm-2 control-label" for="field-1">Upload CV</label>
-				<div class="col-sm-10">
-					<input type="file" name="resume" value="" id="field-1" required>
-				</div>
-			</div>			
-			<div class="form-group-separator"></div>
-	    <div class="form-group" align="center">
-		<button type="submit"  class="btn btn-success">Submit</button>
-    </div>
-    </div>
-    </div>
-    </form> 
-    </div>
-    </div>                  
+</div>
+                       
                   <!-- -end upload cv section -->        
         
-      
-       <!--start-contact-->
+ <!--start-contact-->
         <div id="templatemo-contact">
             <div class="container">
                 <div class="row">

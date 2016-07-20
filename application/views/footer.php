@@ -60,19 +60,19 @@
         <script src="<?=base_url();?>js/colorbox/jquery.colorbox-min.js"  type="text/javascript"></script>
         <script src="<?=base_url();?>js/templatemo_script.js"  type="text/javascript"></script>
 	<script>
-	function a(val)
+	function otherfield(val)
 	{	
 		if(val=='Other')
 		{
+			
 			$('#divID').show();
 		}
 		else
 		{
 			$('#divID').hide();
-			$('#other').val('');
+			$('#Other').val('Other');
 		}
-
-	}
+    }
 	</script>
 <!-- 
     http://www.junctiontech.in
