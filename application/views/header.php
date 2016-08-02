@@ -24,6 +24,12 @@
          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
          <script language=Javascript>
+         
+         function uploadCVActive()
+         {
+			$('#contactActive').removeClass('active');
+			$('#uploadCV').addClass('active');
+         }
          function onlynumber(evt)
          {
             var charCode = (evt.which) ? evt.which : event.keyCode
@@ -50,7 +56,6 @@
     	}
       function val()
       {
-    	  //var mobile = document.getElementById('mobile').value;
       var name = document.getElementById('name').value;
       if(name== "")
       {
@@ -105,7 +110,7 @@
      </script>
      <!------------------------------------------------End of java script validation----------------------------------------------------------------->
     </head>
-    <body>
+    <body onload="uploadCVActive();">
          <div class="templatemo-top-bar" id="templatemo-top">
             <div class="container">
                 <div class="subheader">
@@ -133,12 +138,12 @@
                         </div>
                         <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;">
-                                <li class="active"><a href="#templatemo-top">HOME</a></li>
+                                <li><a href="#templatemo-top">HOME</a></li>
                                 <li><a href="#templatemo-about">ABOUT</a></li>
                                 <li><a href="#templatemo-portfolio">PROJECTS</a></li>
                                 <li><a href="#templatemo-blog">SERVICES</a></li>
-                                <li><a href="#templatemo-upload">UPLOAD CV</a></li>
-                                <li><a href="#templatemo-contact">CONTACT</a></li>   
+                                <li id="uploadCV"><a href="#templatemo-upload">UPLOAD CV</a></li>
+                                <li id="contactActive"><a href="#templatemo-contact">CONTACT</a></li>   
                             </ul>
                             
                         </div><!--/.nav-collapse -->
