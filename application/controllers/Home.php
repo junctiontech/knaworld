@@ -96,13 +96,13 @@ class Home extends CI_Controller
 							$mail->Password = 'initial1$'; 
 								
 							//Set who the message is to be sent from
-							$mail->setFrom('lexusinfratech@gmail.com',$name);
+							$mail->setFrom('info@lexusinfra.in',$name);
 								
 							//Set an alternative reply-to address
-							$mail->addReplyTo('lexusinfratech@gmail.com',$name);
+							$mail->addReplyTo('info@lexusinfra.in',$name);
 								
 							//Set who the message is to be sent to
-							$mail->addAddress('lexusinfratech@gmail.com');
+							$mail->addAddress('info@lexusinfra.in');
 								
 							//Set the subject line
 							$mail->Subject = $subject;

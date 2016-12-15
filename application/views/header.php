@@ -116,7 +116,7 @@
                 <div class="subheader">
                     <div id="phone" class="pull-left">
                          <img src="<?=base_url();?>images/email.png" alt="email"/>
-                            lexusinfratech@gmail.com
+                            info@lexusinfra.in
                     </div>
 
                     </div>

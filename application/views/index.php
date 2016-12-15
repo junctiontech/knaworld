@@ -505,7 +505,7 @@
                         <p>&nbsp &nbsp &nbsp Ashima Mall, Hoshangabad Road </p> 
                         <p>&nbsp &nbsp &nbsp Bhopal 462026</p>
                         <p><img src="<?=base_url();?>images/phone1.png"  alt="phone" /> +91 755 405 3276</p>
-                        <p><img src="<?=base_url();?>images/email.png" alt="email"/>lexusinfratech@gmail.com</p>
+                        <p><img src="<?=base_url();?>images/email.png" alt="email"/>info@lexusinfra.in</p>
                         <p><img src="<?=base_url();?>images/globe.png" alt="globe" /><a class="link_orange" href="<?=base_url();?>http://www.lexusinfra.in"><span class="txt_orange">www.lexusinfra.in</span></a></p>
 
                         <form class="form-horizontal" action="connectivity.php" method="POST">

@@ -46,7 +46,7 @@
                         	Design: <a href="http://lexusinfra.in">Lexusinfra</a>
                                  <p>seemore: <a href="http://www.junctiontech.in">Junctiontech</a>
                                     &nbsp<a href="http://www.geminiconsultant.com">Geminiconsultant</a>
-                                    &nbsp<a href="http://knaworld.com/sitemap.html">Sitemap</a>
+                                    &nbsp<a href="http://lexusinfra.in/sitemap.html">Sitemap</a>
                                  </p>
                         </div>
                         
