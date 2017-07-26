@@ -90,7 +90,7 @@ if ( ! function_exists( 'mercantile_footer' ) ) :
                         <div class="col-sm-4 init-animate fadeInDown1">
                             <div class="footer-copyright border text-center">
                                 <div class="site-info">
-                                    <?php printf( esc_html__( '%1$s by %2$s', 'mercantile' ), 'Developed', '<a href="junctiontech.in" rel="designer">Junction Software</a>' ); ?>
+                                    <?php printf( esc_html__( '%1$s by %2$s', 'mercantile' ), 'Developed', '<a href="junctiontech.in" rel="designer">Junction Software</a> <br> Other Product- <a target="_blank" href="https://www.zeroerp.com">School Management Software' ); ?>
                                 </div><!-- .site-info -->
                             </div>
                         </div>
